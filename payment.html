@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment - FIX DOOR</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f6f8fa;
+        padding: 20px;
+    }
+    .payment-container {
+        max-width: 450px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .amount-box {
+        background: #eaf4ff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .payment-modes div {
+        padding: 12px;
+        margin: 8px 0;
+        background: #fafafa;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        transition: .2s;
+    }
+    .payment-modes div:hover {
+        background: #eaf4ff;
+    }
+    .btn-pay {
+        width: 100%;
+        padding: 14px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 17px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="payment-container">
+    <h2>Complete Payment</h2>
+
+    <div class="amount-box">
+        <strong>Total Amount: </strong> ₹<span id="amount">0</span>
+    </div>
+
+    <h3>Select Payment Mode</h3>
+    <div class="payment-modes">
+        <div onclick="selectMode('UPI')">💳 UPI (GPay / PhonePe / Paytm)</div>
+        <div onclick="selectMode('Card')">💳 Credit / Debit Card</div>
+        <div onclick="selectMode('COD')">💵 Cash on Delivery</div>
+    </div>
+
+    <button class="btn-pay" onclick="completePayment()" window.location.href = "bill.html">Proceed to Pay</button>
+</div>
+
+<script>
+    let selectedMode = null;
+
+    function selectMode(mode) {
+        selectedMode = mode;
+        alert(mode + " selected");
+    }
+
+    // Load amount from booking
+    document.addEventListener("DOMContentLoaded", () => {
+        const booking = JSON.parse(sessionStorage.getItem("bookingData"));
+        if (booking) {
+            document.getElementById("amount").textContent = booking.servicePrice;
+        }
+    });
+
+    function completePayment() {
+        if (!selectedMode) {
+            alert("Please select a payment mode!");
+            return;
+        }
+
+        alert("Payment Successful via " + selectedMode + "!");
+        window.location.href = "tracking.html";
+
+
+        function makePayment() {
+    alert("Payment Successful!");
+
+    // After payment, go to bill page
+    window.location.href = "bill.html";
+}
+}
+</script>
+
+
+</body>
+</html>

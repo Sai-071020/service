@@ -239,6 +239,12 @@
                         Register as Technician
                     </button>
                 </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-description">
+                        Email: <a href="mailto:fixdoorofficial@gmail.com">fixdoorofficial@gmail.com</a>
+                    </p>
+                </div>
             </div>
             
             <div class="footer-bottom">
@@ -417,6 +423,130 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- Chatbot Floating Button -->
+<style>
+    #chatbot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #007bff;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        z-index: 9999;
+    }
+
+    #chatbot-window {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 300px;
+        height: 380px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 9999;
+    }
+
+    #chatbot-header {
+        background: #007bff;
+        padding: 12px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #chatbot-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        font-size: 14px;
+    }
+
+    .chat-msg {
+        background: #f1f1f1;
+        margin-bottom: 8px;
+        padding: 8px;
+        border-radius: 8px;
+        max-width: 80%;
+    }
+
+    .chat-user {
+        background: #007bff;
+        color: white;
+        margin-left: auto;
+    }
+
+    #chatbot-input {
+        display: flex;
+        border-top: 1px solid #ddd;
+    }
+
+    #chatbot-input input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+    #chatbot-input button {
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+
+<div id="chatbot-button">💬</div>
+
+<div id="chatbot-window">
+    <div id="chatbot-header">Support Bot</div>
+    <div id="chatbot-messages"></div>
+
+    <div id="chatbot-input">
+        <input type="text" id="chatbotText" placeholder="Type your message...">
+        <button onclick="sendChat()">Send</button>
+    </div>
+</div>
+
+
+<script>
+    const botBtn = document.getElementById("chatbot-button");
+    const botWindow = document.getElementById("chatbot-window");
+    const botMsg = document.getElementById("chatbot-messages");
+
+    botBtn.onclick = () => {
+        botWindow.style.display = botWindow.style.display === "flex" ? "none" : "flex";
+    };
+
+    function sendChat() {
+        let text = document.getElementById("chatbotText").value;
+        if (text.trim() === "") return;
+
+        // Show user message
+        botMsg.innerHTML += `<div class="chat-msg chat-user">${text}</div>`;
+        document.getElementById("chatbotText").value = "";
+
+        // Auto bot reply
+        setTimeout(() => {
+            botMsg.innerHTML += `<div class="chat-msg">Thanks for your message! Our team will respond soon.</div>`;
+            botMsg.scrollTop = botMsg.scrollHeight;
+        }, 600);
+    }
+</script>
+
 </body>
 </html>
 

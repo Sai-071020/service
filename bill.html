@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Invoice</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        padding: 30px;
+    }
+    .invoice-box {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    .line {
+        border-bottom: 1px solid #ddd;
+        margin: 15px 0;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="invoice-box">
+    <h2>Service Payment Invoice</h2>
+    <div class="line"></div>
+
+    <p><strong>Name:</strong> <span id="custName"></span></p>
+    <p><strong>Service:</strong> <span id="custService"></span></p>
+    <p><strong>Date:</strong> <span id="custDate"></span></p>
+    <p><strong>Amount Paid:</strong> ₹<span id="custAmount"></span></p>
+
+    <div class="line"></div>
+
+    <p>Thank you for your payment!</p>
+</div>
+
+<script>
+    // Load stored booking detail
+    document.getElementById("custName").innerText = localStorage.getItem("custName");
+    document.getElementById("custService").innerText = localStorage.getItem("custService");
+    document.getElementById("custDate").innerText = localStorage.getItem("custDate");
+    document.getElementById("custAmount").innerText = localStorage.getItem("custAmount");
+</script>
+
+</body>
+</html>

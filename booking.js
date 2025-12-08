@@ -210,56 +210,17 @@ function saveBookingToHistory(bookingData) {
         console.error('Error saving booking to history:', e);
     }
 }
+// After successful booking redirect to payment page
+function showBookingSuccess(formData) {
+    console.log("SHOW BOOKING SUCCESS RUNNING");
+    alert("Booking Successful!");
+    localStorage.setItem("custName", formData.customerName);
+    localStorage.setItem("custService", formData.technicianName);
+    localStorage.setItem("custDate", new Date().toLocaleString());
+    localStorage.setItem("custAmount", formData.servicePrice);
 
-// Show booking success
-function showBookingSuccess(bookingData) {
-    // Create success modal
-    const successModal = document.createElement('div');
-    successModal.className = 'success-modal-overlay';
-    successModal.innerHTML = `
-        <div class="success-modal-content">
-            <div class="success-icon">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                    <circle cx="32" cy="32" r="32" fill="#10B981"/>
-                    <path d="M20 32L28 40L44 24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <h2>Booking Confirmed!</h2>
-            <p>Your booking has been successfully submitted.</p>
-            <div class="booking-details">
-                <div class="detail-row">
-                    <span class="detail-label">Technician:</span>
-                    <span class="detail-value">${bookingData.technicianName}</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Service Charge:</span>
-                    <span class="detail-value">₹${bookingData.servicePrice}</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Contact:</span>
-                    <span class="detail-value">${bookingData.mobileNumber}</span>
-                </div>
-            </div>
-            <p class="success-message">
-                The technician will contact you shortly at <strong>${bookingData.mobileNumber}</strong> 
-                to confirm the appointment and visit your address.
-            </p>
-            <div class="success-actions">
-                <button class="btn-primary" onclick="goToTracking()">
-                    Track Service
-                </button>
-                <button class="btn-secondary" onclick="window.location.href='index.html'">
-                    Back to Home
-                </button>
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(successModal);
-    
-    // Animate in
-    setTimeout(() => {
-        successModal.style.opacity = '1';
-    }, 10);
+    window.location.href = "payment.html";  // 🔥 Redirect to payment page
 }
+
+
 
