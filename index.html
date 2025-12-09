@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="fix door.svg">
 </head>
 <body>
     <!-- Navigation -->
@@ -522,7 +523,7 @@
 </div>
 
 
-<script>
+<!--<script>
     const botBtn = document.getElementById("chatbot-button");
     const botWindow = document.getElementById("chatbot-window");
     const botMsg = document.getElementById("chatbot-messages");
@@ -545,7 +546,109 @@
             botMsg.scrollTop = botMsg.scrollHeight;
         }, 600);
     }
+</script>-->
+<script>
+    const botBtn = document.getElementById("chatbot-button");
+    const botWindow = document.getElementById("chatbot-window");
+    const botMsg = document.getElementById("chatbot-messages");
+
+    botBtn.onclick = () => {
+        botWindow.style.display = botWindow.style.display === "flex" ? "none" : "flex";
+    };
+
+    function sendChat() {
+        let text = document.getElementById("chatbotText").value;
+        if (text.trim() === "") return;
+
+        // Show user message
+        botMsg.innerHTML += `<div class="chat-msg chat-user">${text}</div>`;
+        document.getElementById("chatbotText").value = "";
+
+        // Bot Response
+        let botReply = getBotResponse(text);
+
+        setTimeout(() => {
+            botMsg.innerHTML += `<div class="chat-msg">${botReply.replace(/\n/g, "<br>")}</div>`;
+            botMsg.scrollTop = botMsg.scrollHeight;
+        }, 500);
+    }
+
+    // --------------------------
+    // AI Chatbot Logic Here
+    // --------------------------
+    function getBotResponse(message) {
+        message = message.toLowerCase();
+
+        // Greetings
+        if (message.includes("hi") || message.includes("hello")) {
+            return "Hello! Welcome to FixDoor Support 😊 How can I help you today?";
+        }
+
+        // Appliances
+        if (message.includes("ac")) {
+            return "AC Issues we handle:\n• Cooling problem\n• Gas leak\n• Water leakage\n• No power\n\nYou can book a technician anytime!";
+        }
+
+        if (message.includes("fridge") || message.includes("refrigerator")) {
+            return "Fridge Problems:\n• Not cooling\n• Compressor sound\n• Water leakage\n• Door not sealing";
+        }
+
+        if (message.includes("washing machine")) {
+            return "Washing Machine Issues:\n• Drum not spinning\n• Water not draining\n• Heavy noise\n• Door lock problem";
+        }
+
+        if (message.includes("fan")) {
+            return "Fan Issues:\n• Not rotating\n• Slow speed\n• Capacitor problem\n• Burning smell";
+        }
+
+        if (message.includes("tv") || message.includes("television")) {
+            return "TV Problems:\n• No display\n• Audio only\n• Black screen\n• Remote not working";
+        }
+
+        if (message.includes("mobile") || message.includes("phone")) {
+            return "Mobile Issues:\n• Screen broken\n• Battery drops fast\n• Charging port issue\n• Speaker/mic not working";
+        }
+
+        if (message.includes("laptop")) {
+            return "Laptop Problems:\n• Slow performance\n• Dead battery\n• Broken screen\n• Heating issue";
+        }
+
+        if (message.includes("geyser") || message.includes("water heater")) {
+            return "Water Heater Issues:\n• Not heating\n• Overheating\n• Leakage\n• Strange noise";
+        }
+
+        if (message.includes("inverter")) {
+            return "Inverter Problems:\n• No backup\n• Not charging\n• Beeping noise\n• Power fluctuation";
+        }
+
+        if (message.includes("microwave") || message.includes("oven")) {
+            return "Microwave Issues:\n• Not heating\n• Buttons not working\n• Sparks inside\n• Tray not rotating";
+        }
+
+        // Pricing
+        if (message.includes("price") || message.includes("cost")) {
+            return "Basic service starts from ₹199 only. Final price depends on the issue and parts required.";
+        }
+
+        // Booking
+        if (message.includes("book") || message.includes("service")) {
+            return "You can book a service directly from the website. After booking, your technician will contact you!";
+        }
+
+        // Cancellation
+        if (message.includes("cancel") || message.includes("cancellation")) {
+            return "Cancellation Policy:\nYou can cancel before the technician arrives. No cancellation fee before dispatch.";
+        }
+
+        // Refund Policy
+        if (message.includes("refund")) {
+            return "Refund Policy:\nIf the technician couldn't fix your issue, you're eligible for a refund within 3 days.\nProcessing time: 2–5 days.";
+        }
+
+        return "I didn’t understand that. Try: AC / Fridge / Price / Book / Refund / Cancel";
+    }
 </script>
+
 
 </body>
 </html>
