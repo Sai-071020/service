@@ -20,7 +20,7 @@ const techniciansData = {
                 experience: "8 years",
                 rating: 4.8,
                 reviews: 245,
-                price: 500,
+                price: 150,
                 profile: "Expert in AC installation, repair, and maintenance. Specialized in all major brands.",
                 image: "👨‍🔧",
                 verified: true
@@ -31,7 +31,7 @@ const techniciansData = {
                 experience: "12 years",
                 rating: 4.9,
                 reviews: 389,
-                price: 600,
+                price: 150,
                 profile: "Certified AC technician with extensive experience in commercial and residential AC systems.",
                 image: "👨‍💼",
                 verified: true
@@ -42,7 +42,7 @@ const techniciansData = {
                 experience: "6 years",
                 rating: 4.7,
                 reviews: 156,
-                price: 450,
+                price: 100,
                 profile: "Quick and reliable AC repair services. Available 24/7 for emergency repairs.",
                 image: "👨‍🔧",
                 verified: true
@@ -55,7 +55,7 @@ const techniciansData = {
                 experience: "10 years",
                 rating: 4.8,
                 reviews: 312,
-                price: 550,
+                price: 100,
                 profile: "Specialized in refrigerator and freezer repairs. Expert in all major brands.",
                 image: "👨‍🔧",
                 verified: true
@@ -66,7 +66,7 @@ const techniciansData = {
                 experience: "7 years",
                 rating: 4.6,
                 reviews: 198,
-                price: 500,
+                price: 100,
                 profile: "Quick refrigerator repair services with genuine parts guarantee.",
                 image: "👨‍💼",
                 verified: true
@@ -79,7 +79,7 @@ const techniciansData = {
                 experience: "15 years",
                 rating: 4.9,
                 reviews: 456,
-                price: 400,
+                price: 100,
                 profile: "Licensed electrician with expertise in home wiring, panel upgrades, and repairs.",
                 image: "👨‍🔧",
                 verified: true
@@ -90,7 +90,7 @@ const techniciansData = {
                 experience: "9 years",
                 rating: 4.7,
                 reviews: 267,
-                price: 350,
+                price: 150,
                 profile: "Professional electrical services for homes and offices. Safety certified.",
                 image: "👨‍💼",
                 verified: true
@@ -101,7 +101,7 @@ const techniciansData = {
                 experience: "11 years",
                 rating: 4.8,
                 reviews: 334,
-                price: 450,
+                price: 100,
                 profile: "Expert in electrical troubleshooting, installations, and maintenance.",
                 image: "👨‍🔧",
                 verified: true
@@ -114,7 +114,7 @@ const techniciansData = {
                 experience: "9 years",
                 rating: 4.7,
                 reviews: 223,
-                price: 500,
+                price: 150,
                 profile: "Specialized in washing machine repairs for top and front load machines.",
                 image: "👨‍🔧",
                 verified: true
@@ -125,7 +125,7 @@ const techniciansData = {
                 experience: "6 years",
                 rating: 4.6,
                 reviews: 145,
-                price: 450,
+                price: 100,
                 profile: "Quick and efficient washing machine repair services with warranty.",
                 image: "👨‍💼",
                 verified: true
@@ -138,7 +138,7 @@ const techniciansData = {
                 experience: "8 years",
                 rating: 4.8,
                 reviews: 189,
-                price: 400,
+                price: 150,
                 profile: "Expert in microwave oven repairs and maintenance for all brands.",
                 image: "👨‍🔧",
                 verified: true
@@ -151,7 +151,7 @@ const techniciansData = {
                 experience: "14 years",
                 rating: 4.9,
                 reviews: 512,
-                price: 600,
+                price: 100,
                 profile: "All-in-one household technician for all your home appliance needs.",
                 image: "👨‍💼",
                 verified: true
@@ -162,7 +162,7 @@ const techniciansData = {
                 experience: "10 years",
                 rating: 4.7,
                 reviews: 298,
-                price: 550,
+                price: 100,
                 profile: "Versatile technician handling multiple household appliances and repairs.",
                 image: "👨‍🔧",
                 verified: true
@@ -175,7 +175,7 @@ const techniciansData = {
                 experience: "7 years",
                 rating: 4.8,
                 reviews: 167,
-                price: 800,
+                price: 150,
                 profile: "Certified solar panel installation and repair specialist.",
                 image: "👨‍🔧",
                 verified: true
@@ -188,7 +188,7 @@ const techniciansData = {
                 experience: "11 years",
                 rating: 4.7,
                 reviews: 234,
-                price: 500,
+                price: 100,
                 profile: "Expert in CCTV installation, repair, and maintenance for homes and businesses.",
                 image: "👨‍💼",
                 verified: true
@@ -199,7 +199,7 @@ const techniciansData = {
                 experience: "8 years",
                 rating: 4.6,
                 reviews: 189,
-                price: 450,
+                price: 150,
                 profile: "Professional CCTV services with modern security solutions.",
                 image: "👨‍🔧",
                 verified: true
@@ -214,7 +214,7 @@ const techniciansData = {
                 experience: "9 years",
                 rating: 4.8,
                 reviews: 312,
-                price: 550,
+                price: 100,
                 profile: "Expert AC technician serving Delhi NCR. Specialized in all major brands.",
                 image: "👨‍🔧",
                 verified: true
@@ -225,7 +225,7 @@ const techniciansData = {
                 experience: "13 years",
                 rating: 4.9,
                 reviews: 445,
-                price: 650,
+                price: 100,
                 profile: "Certified AC repair specialist with extensive experience.",
                 image: "👨‍💼",
                 verified: true
@@ -238,7 +238,7 @@ const techniciansData = {
                 experience: "12 years",
                 rating: 4.8,
                 reviews: 356,
-                price: 450,
+                price: 100,
                 profile: "Licensed electrician providing quality electrical services in Delhi.",
                 image: "👨‍🔧",
                 verified: true
@@ -251,7 +251,7 @@ const techniciansData = {
                 experience: "8 years",
                 rating: 4.7,
                 reviews: 234,
-                price: 520,
+                price: 150,
                 profile: "Professional refrigerator repair services in Delhi.",
                 image: "👨‍💼",
                 verified: true
@@ -264,7 +264,7 @@ const techniciansData = {
                 experience: "7 years",
                 rating: 4.6,
                 reviews: 198,
-                price: 480,
+                price: 150,
                 profile: "Expert washing machine repair technician.",
                 image: "👨‍🔧",
                 verified: true
@@ -277,7 +277,7 @@ const techniciansData = {
                 experience: "6 years",
                 rating: 4.7,
                 reviews: 156,
-                price: 420,
+                price: 150,
                 profile: "Quick microwave repair services in Delhi.",
                 image: "👨‍💼",
                 verified: true
@@ -290,7 +290,7 @@ const techniciansData = {
                 experience: "11 years",
                 rating: 4.8,
                 reviews: 389,
-                price: 600,
+                price: 100,
                 profile: "All-in-one household technician for Delhi residents.",
                 image: "👨‍🔧",
                 verified: true
@@ -303,7 +303,7 @@ const techniciansData = {
                 experience: "8 years",
                 rating: 4.7,
                 reviews: 178,
-                price: 850,
+                price: 150,
                 profile: "Solar panel installation and repair specialist.",
                 image: "👨‍💼",
                 verified: true
@@ -316,7 +316,7 @@ const techniciansData = {
                 experience: "10 years",
                 rating: 4.8,
                 reviews: 267,
-                price: 550,
+                price: 100,
                 profile: "Professional CCTV installation and repair services.",
                 image: "👨‍🔧",
                 verified: true
@@ -331,7 +331,7 @@ const techniciansData = {
                 experience: "10 years",
                 rating: 4.8,
                 reviews: 298,
-                price: 500,
+                price: 100,
                 profile: "Expert AC repair services in Bangalore.",
                 image: "👨‍🔧",
                 verified: true
@@ -344,7 +344,7 @@ const techniciansData = {
                 experience: "14 years",
                 rating: 4.9,
                 reviews: 412,
-                price: 400,
+                price: 150,
                 profile: "Licensed electrician serving Bangalore.",
                 image: "👨‍💼",
                 verified: true
@@ -357,7 +357,7 @@ const techniciansData = {
                 experience: "9 years",
                 rating: 4.7,
                 reviews: 245,
-                price: 530,
+                price: 100,
                 profile: "Professional refrigerator repair technician.",
                 image: "👨‍🔧",
                 verified: true
@@ -370,7 +370,7 @@ const techniciansData = {
                 experience: "7 years",
                 rating: 4.6,
                 reviews: 189,
-                price: 470,
+                price: 150,
                 profile: "Expert washing machine repair services.",
                 image: "👨‍💼",
                 verified: true
@@ -383,7 +383,7 @@ const techniciansData = {
                 experience: "8 years",
                 rating: 4.7,
                 reviews: 167,
-                price: 410,
+                price: 150,
                 profile: "Quick microwave repair in Bangalore.",
                 image: "👨‍🔧",
                 verified: true
@@ -396,7 +396,7 @@ const techniciansData = {
                 experience: "12 years",
                 rating: 4.8,
                 reviews: 356,
-                price: 580,
+                price: 100,
                 profile: "Versatile household technician.",
                 image: "👨‍💼",
                 verified: true
@@ -409,7 +409,7 @@ const techniciansData = {
                 experience: "9 years",
                 rating: 4.8,
                 reviews: 201,
-                price: 820,
+                price: 100,
                 profile: "Solar panel specialist in Bangalore.",
                 image: "👨‍🔧",
                 verified: true
@@ -422,7 +422,7 @@ const techniciansData = {
                 experience: "10 years",
                 rating: 4.7,
                 reviews: 223,
-                price: 520,
+                price: 150,
                 profile: "CCTV installation and repair expert.",
                 image: "👨‍💼",
                 verified: true
